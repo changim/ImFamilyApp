@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Simperium/Simperium.h>
 
 @interface CJIMAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,6 +16,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) Simperium *simperium;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

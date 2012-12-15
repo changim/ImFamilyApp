@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "SPManagedObject.h"
+#import <Simperium/SPManagedObject.h>
 
 
 @interface User : SPManagedObject

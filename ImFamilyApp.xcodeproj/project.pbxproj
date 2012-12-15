@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		098118A9167CCBE4004C0C82 /* Simperium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118A8167CCBE4004C0C82 /* Simperium.framework */; };
+		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
+		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
+		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
+		098118B2167CCC17004C0C82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B1167CCC17004C0C82 /* Security.framework */; };
+		098118B4167CCE10004C0C82 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B3167CCE10004C0C82 /* libz.dylib */; };
+		098118B6167CCE28004C0C82 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B5167CCE28004C0C82 /* libicucore.dylib */; };
+		098118C0167CD05B004C0C82 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 098118BF167CD05B004C0C82 /* User.m */; };
+		098118C6167CD05C004C0C82 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 098118C5167CD05C004C0C82 /* Location.m */; };
+		098118C8167CD112004C0C82 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098118C7167CD112004C0C82 /* LoginView.xib */; };
+		09811905167CD317004C0C82 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 09811904167CD317004C0C82 /* Message.m */; };
 		09D8D13E167CCA070000BAA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D13D167CCA070000BAA0 /* UIKit.framework */; };
 		09D8D140167CCA070000BAA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D13F167CCA070000BAA0 /* Foundation.framework */; };
 		09D8D142167CCA070000BAA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D141167CCA070000BAA0 /* CoreGraphics.framework */; };
@@ -24,6 +35,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		098118A8167CCBE4004C0C82 /* Simperium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simperium.framework; sourceTree = "<group>"; };
+		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		098118B1167CCC17004C0C82 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		098118B3167CCE10004C0C82 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		098118B5167CCE28004C0C82 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		098118BE167CD05B004C0C82 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		098118BF167CD05B004C0C82 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		098118C4167CD05C004C0C82 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		098118C5167CD05C004C0C82 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		098118C7167CD112004C0C82 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		09811903167CD317004C0C82 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		09811904167CD317004C0C82 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		09D8D139167CCA070000BAA0 /* ImFamilyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImFamilyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D8D13D167CCA070000BAA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09D8D13F167CCA070000BAA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,10 +76,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098118B6167CCE28004C0C82 /* libicucore.dylib in Frameworks */,
+				098118B4167CCE10004C0C82 /* libz.dylib in Frameworks */,
+				098118B2167CCC17004C0C82 /* Security.framework in Frameworks */,
+				098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */,
+				098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */,
+				098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */,
 				09D8D13E167CCA070000BAA0 /* UIKit.framework in Frameworks */,
 				09D8D140167CCA070000BAA0 /* Foundation.framework in Frameworks */,
 				09D8D142167CCA070000BAA0 /* CoreGraphics.framework in Frameworks */,
 				09D8D144167CCA070000BAA0 /* CoreData.framework in Frameworks */,
+				098118A9167CCBE4004C0C82 /* Simperium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +96,12 @@
 		09D8D12E167CCA070000BAA0 = {
 			isa = PBXGroup;
 			children = (
+				098118B5167CCE28004C0C82 /* libicucore.dylib */,
+				098118B3167CCE10004C0C82 /* libz.dylib */,
+				098118B1167CCC17004C0C82 /* Security.framework */,
+				098118AF167CCC0A004C0C82 /* CFNetwork.framework */,
+				098118AD167CCC02004C0C82 /* MobileCoreServices.framework */,
+				098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */,
 				09D8D145167CCA070000BAA0 /* ImFamilyApp */,
 				09D8D13C167CCA070000BAA0 /* Frameworks */,
 				09D8D13A167CCA070000BAA0 /* Products */,
@@ -81,6 +119,7 @@
 		09D8D13C167CCA070000BAA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				098118A8167CCBE4004C0C82 /* Simperium.framework */,
 				09D8D13D167CCA070000BAA0 /* UIKit.framework */,
 				09D8D13F167CCA070000BAA0 /* Foundation.framework */,
 				09D8D141167CCA070000BAA0 /* CoreGraphics.framework */,
@@ -92,6 +131,7 @@
 		09D8D145167CCA070000BAA0 /* ImFamilyApp */ = {
 			isa = PBXGroup;
 			children = (
+				098118C7167CD112004C0C82 /* LoginView.xib */,
 				09D8D14E167CCA070000BAA0 /* CJIMAppDelegate.h */,
 				09D8D14F167CCA070000BAA0 /* CJIMAppDelegate.m */,
 				09D8D157167CCA070000BAA0 /* MainStoryboard.storyboard */,
@@ -100,6 +140,12 @@
 				09D8D160167CCA070000BAA0 /* CJIMDetailViewController.h */,
 				09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */,
 				09D8D15A167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld */,
+				09811903167CD317004C0C82 /* Message.h */,
+				09811904167CD317004C0C82 /* Message.m */,
+				098118C4167CD05C004C0C82 /* Location.h */,
+				098118C5167CD05C004C0C82 /* Location.m */,
+				098118BE167CD05B004C0C82 /* User.h */,
+				098118BF167CD05B004C0C82 /* User.m */,
 				09D8D146167CCA070000BAA0 /* Supporting Files */,
 			);
 			path = ImFamilyApp;
@@ -176,6 +222,7 @@
 				09D8D154167CCA070000BAA0 /* Default@2x.png in Resources */,
 				09D8D156167CCA070000BAA0 /* Default-568h@2x.png in Resources */,
 				09D8D159167CCA070000BAA0 /* MainStoryboard.storyboard in Resources */,
+				098118C8167CD112004C0C82 /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +238,9 @@
 				09D8D15C167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld in Sources */,
 				09D8D15F167CCA070000BAA0 /* CJIMMasterViewController.m in Sources */,
 				09D8D162167CCA070000BAA0 /* CJIMDetailViewController.m in Sources */,
+				098118C0167CD05B004C0C82 /* User.m in Sources */,
+				098118C6167CD05C004C0C82 /* Location.m in Sources */,
+				09811905167CD317004C0C82 /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +319,14 @@
 		09D8D166167CCA070000BAA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImFamilyApp/ImFamilyApp-Prefix.pch";
 				INFOPLIST_FILE = "ImFamilyApp/ImFamilyApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -280,9 +335,14 @@
 		09D8D167167CCA070000BAA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImFamilyApp/ImFamilyApp-Prefix.pch";
 				INFOPLIST_FILE = "ImFamilyApp/ImFamilyApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -307,6 +367,7 @@
 				09D8D167167CCA070000BAA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

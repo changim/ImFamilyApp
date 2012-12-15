@@ -22,6 +22,16 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     CJIMMasterViewController *controller = (CJIMMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    self.simperium = [[Simperium alloc] initWithRootViewController:
+                      _window.rootViewController];
+    
+    [self.simperium startWithAppID:@"dawn-carts-884"
+                            APIKey:@"61e833ca9dd24d1cb8011cc1ca6df5ad"
+                             model:[self managedObjectModel]
+                           context:[self managedObjectContext]
+                       coordinator:[self persistentStoreCoordinator]];
+    
     return YES;
 }
 							
