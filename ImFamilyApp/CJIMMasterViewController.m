@@ -10,6 +10,7 @@
 
 #import "CJIMDetailViewController.h"
 #import "CJIMLoginViewController.h"
+#import "CJIMCustomTableViewCell.h"
 
 @interface CJIMMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -205,12 +206,21 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    CJIMCustomTableViewCell *customCell = (CJIMCustomTableViewCell *)cell;
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     //NSString *titleIs = @"Subject: ";
     //cell.textLabel.text = [titleIs stringByAppendingString:[[object valueForKey:@"title"] description]];
-    cell.textLabel.text = [[object valueForKey:@"title"] description];
+    customCell.titleLabel.text = [[object valueForKey:@"title"] description];
     NSString *authorIs = @"From: ";
-    cell.detailTextLabel.text = [authorIs stringByAppendingString:[[[object valueForKey:@"user"] valueForKey:@"name"] description]];
+    customCell.authorLabel.text = [authorIs stringByAppendingString:[[[object valueForKey:@"user"] valueForKey:@"name"] description]];
+    
+    NSDate *date = [object valueForKey:@"createdAt"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [dateFormatter setLocale:usLocale];
+    customCell.dateLabel.text = [dateFormatter stringFromDate:date];
 }
 
 @end

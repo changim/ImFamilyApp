@@ -23,36 +23,60 @@
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Messages" id="12" customClass="CJIMMasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" detailTextLabel="nIO-8J-OJI" style="IBUITableViewCellStyleValue1" id="lJ0-d7-vTF">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="83" id="lJ0-d7-vTF" customClass="CJIMCustomTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="82"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="11" width="35" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXD-0k-h72">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-8J-OJI">
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgR-j7-b9t">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="13" id="NYm-yH-f6S"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPb-db-bkD">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="X7F-gK-IVn"/>
+                                                <constraint firstAttribute="width" constant="260" id="ftG-7n-yJ7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GPb-db-bkD" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="20" type="default" id="7ZU-D0-l1w"/>
+                                    <constraint firstItem="zXD-0k-h72" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="20" type="default" id="8XD-bX-1P5"/>
+                                    <constraint firstItem="GPb-db-bkD" firstAttribute="trailing" secondItem="zXD-0k-h72" secondAttribute="trailing" type="default" id="Mxn-r4-MeZ"/>
+                                    <constraint firstItem="zXD-0k-h72" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="20" type="default" id="Xdx-BB-7X0"/>
+                                    <constraint firstItem="zXD-0k-h72" firstAttribute="trailing" secondItem="mgR-j7-b9t" secondAttribute="trailing" type="default" id="ZWh-rB-MSz"/>
+                                    <constraint firstItem="GPb-db-bkD" firstAttribute="baseline" secondItem="zXD-0k-h72" secondAttribute="baseline" type="default" id="b0N-y5-Jb6"/>
+                                    <constraint firstItem="GPb-db-bkD" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="20" type="default" id="bQD-OA-xBR"/>
+                                    <constraint firstItem="mgR-j7-b9t" firstAttribute="top" secondItem="GPb-db-bkD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lby-N8-GRk"/>
+                                    <constraint firstItem="mgR-j7-b9t" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="20" type="default" id="soy-wb-6aO"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="authorLabel" destination="GPb-db-bkD" id="Ju9-CE-yBU"/>
+                                    <outlet property="dateLabel" destination="mgR-j7-b9t" id="pFT-B6-PIo"/>
+                                    <outlet property="titleLabel" destination="zXD-0k-h72" id="Ef2-rL-lVj"/>
                                     <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
                                 </connections>
                             </tableViewCell>
@@ -138,7 +162,19 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-ms-oQr">
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Datetime" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9m-NL-ISU">
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Author" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOs-Wa-0XH">
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -146,16 +182,24 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="xrJ-Gi-Vtg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7Vy-Hu-KIC"/>
                             <constraint firstItem="j8a-ms-oQr" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Big-oq-gyy"/>
-                            <constraint firstItem="xrJ-Gi-Vtg" firstAttribute="top" secondItem="j8a-ms-oQr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="STj-yE-2u3"/>
+                            <constraint firstItem="YOs-Wa-0XH" firstAttribute="top" secondItem="j8a-ms-oQr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CVw-T6-cIT"/>
+                            <constraint firstAttribute="trailing" secondItem="YOs-Wa-0XH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KeR-eq-J0C"/>
+                            <constraint firstItem="h9m-NL-ISU" firstAttribute="top" secondItem="YOs-Wa-0XH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WSz-5b-yDl"/>
                             <constraint firstAttribute="trailing" secondItem="xrJ-Gi-Vtg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="at8-bl-uP6"/>
+                            <constraint firstItem="h9m-NL-ISU" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c6T-NM-jdw"/>
                             <constraint firstItem="xrJ-Gi-Vtg" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eOb-83-iPd"/>
                             <constraint firstItem="j8a-ms-oQr" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fZD-jO-heK"/>
                             <constraint firstAttribute="trailing" secondItem="j8a-ms-oQr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i27-EI-Key"/>
+                            <constraint firstAttribute="trailing" secondItem="h9m-NL-ISU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k0z-Ss-A8L"/>
+                            <constraint firstItem="xrJ-Gi-Vtg" firstAttribute="top" secondItem="h9m-NL-ISU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y5o-9I-4Xb"/>
+                            <constraint firstItem="YOs-Wa-0XH" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zVF-eG-ocV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Message" id="26"/>
                     <connections>
+                        <outlet property="authorLabel" destination="YOs-Wa-0XH" id="lFi-02-Kw0"/>
                         <outlet property="bodyTextView" destination="xrJ-Gi-Vtg" id="at0-Ea-g9N"/>
+                        <outlet property="dateLabel" destination="h9m-NL-ISU" id="TSv-EH-687"/>
                         <outlet property="titleLabel" destination="j8a-ms-oQr" id="ChN-TT-6Ht"/>
                     </connections>
                 </viewController>
@@ -218,10 +262,20 @@
         </scene>
     </scenes>
     <classes>
+        <class className="CJIMCustomTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CJIMCustomTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="CJIMDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CJIMDetailViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="authorLabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="bodyTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UITextField"/>
             </relationships>
         </class>

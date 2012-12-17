@@ -13,6 +13,7 @@
 		09525610167ED56A0073755C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0952560F167ED56A0073755C /* User.m */; };
 		09525614167EE9FC0073755C /* CJIMNewMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09525613167EE9FC0073755C /* CJIMNewMessageController.m */; };
 		0952561F167F0CF10073755C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 0952561E167F0CF10073755C /* Message.m */; };
+		09525622167F2F8E0073755C /* CJIMCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -47,6 +48,8 @@
 		09525613167EE9FC0073755C /* CJIMNewMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMNewMessageController.m; sourceTree = "<group>"; };
 		0952561D167F0CF10073755C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		0952561E167F0CF10073755C /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		09525620167F2F8E0073755C /* CJIMCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMCustomTableViewCell.h; sourceTree = "<group>"; };
+		09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMCustomTableViewCell.m; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -144,6 +147,8 @@
 				091096DE167E7EB800B94984 /* CJIMLoginViewController.m */,
 				09D8D157167CCA070000BAA0 /* MainStoryboard.storyboard */,
 				09D8D15D167CCA070000BAA0 /* CJIMMasterViewController.h */,
+				09525620167F2F8E0073755C /* CJIMCustomTableViewCell.h */,
+				09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */,
 				09D8D15E167CCA070000BAA0 /* CJIMMasterViewController.m */,
 				09D8D160167CCA070000BAA0 /* CJIMDetailViewController.h */,
 				09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */,
@@ -253,6 +258,7 @@
 				09525610167ED56A0073755C /* User.m in Sources */,
 				09525614167EE9FC0073755C /* CJIMNewMessageController.m in Sources */,
 				0952561F167F0CF10073755C /* Message.m in Sources */,
+				09525622167F2F8E0073755C /* CJIMCustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
