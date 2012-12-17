@@ -59,7 +59,11 @@
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     [newManagedObject setValue:self.titleTextField.text forKey:@"title"];
-    [newManagedObject setValue:self.bodyTextView.text forKey:@"body"];
+    
+    NSString *bodyText = self.bodyTextView.text;
+    if ([self.bodyTextView.text isEqualToString:@"Enter message here."]) bodyText = @"";
+    [newManagedObject setValue:bodyText forKey:@"body"];
+    
     [newManagedObject setValue:((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]).currentUser forKey:@"user"];
     [newManagedObject setValue:[NSDate date] forKey:@"createdAt"];
     // Save the context.
@@ -83,8 +87,8 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([textView.textColor isEqual:[UIColor lightGrayColor]]) {
-        textView.textColor = [UIColor blackColor];
+    if ([textView.text isEqualToString:@"Enter message here."]) {
+        textView.textColor = self.titleTextField.textColor;
         textView.text = @"";
     }
 }

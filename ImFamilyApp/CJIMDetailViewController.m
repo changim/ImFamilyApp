@@ -9,6 +9,9 @@
 #import "CJIMDetailViewController.h"
 
 @interface CJIMDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
 - (void)configureView;
 @end
 
@@ -31,7 +34,9 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"body"] description];
+        self.titleLabel.text = [[self.detailItem valueForKey:@"title"] description];
+        self.titleLabel.enabled =NO;
+        self.bodyTextView.text = [[self.detailItem valueForKey:@"body"] description];
     }
 }
 

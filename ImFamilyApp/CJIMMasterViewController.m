@@ -206,8 +206,11 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    //NSString *titleIs = @"Subject: ";
+    //cell.textLabel.text = [titleIs stringByAppendingString:[[object valueForKey:@"title"] description]];
     cell.textLabel.text = [[object valueForKey:@"title"] description];
-    cell.detailTextLabel.text = [[[object valueForKey:@"user"] valueForKey:@"name"] description];
+    NSString *authorIs = @"From: ";
+    cell.detailTextLabel.text = [authorIs stringByAppendingString:[[[object valueForKey:@"user"] valueForKey:@"name"] description]];
 }
 
 @end
