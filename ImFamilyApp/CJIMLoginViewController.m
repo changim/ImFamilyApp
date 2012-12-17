@@ -12,8 +12,8 @@
 #import "CJIMAppDelegate.h"
 
 @interface CJIMLoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *name;
-@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property NSInteger loginAttemptNum;
 @end
 
@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad
 {
-    self.password.secureTextEntry = YES;
+    self.passwordTextField.secureTextEntry = YES;
     self.loginAttemptNum = 0;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -45,7 +45,7 @@
 - (void)login
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name like %@", self.name.text];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name like %@", self.nameTextField.text];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
     [request setPredicate:predicate];
@@ -57,7 +57,7 @@
         return;
     } else {
         User *user = (User*) [queryResult objectAtIndex:0];
-        if ([user.password isEqualToString:self.password.text]) {
+        if ([user.password isEqualToString:self.passwordTextField.text]) {
             NSLog(@"login successful");
             ((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]).currentUser = user;
             [self dismissModalViewControllerAnimated:YES];
@@ -70,8 +70,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    if ([textField isEqual:self.name])
-        [self.password becomeFirstResponder];
+    if ([textField isEqual:self.nameTextField])
+        [self.passwordTextField becomeFirstResponder];
     else [self login];
     
     return YES;

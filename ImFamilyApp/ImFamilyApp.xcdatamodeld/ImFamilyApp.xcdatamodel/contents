@@ -6,6 +6,7 @@
     </entity>
     <entity name="Message" representedClassName="Message" parentEntity="SPManagedObject" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="message" inverseEntity="User" syncable="YES"/>
     </entity>
@@ -21,7 +22,7 @@
     </entity>
     <elements>
         <element name="Location" positionX="-315" positionY="150" width="128" height="73"/>
-        <element name="Message" positionX="214" positionY="14" width="128" height="88"/>
+        <element name="Message" positionX="214" positionY="14" width="128" height="105"/>
         <element name="SPManagedObject" positionX="187" positionY="258" width="128" height="75"/>
         <element name="User" positionX="-126" positionY="27" width="128" height="105"/>
     </elements>

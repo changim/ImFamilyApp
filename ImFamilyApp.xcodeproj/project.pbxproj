@@ -12,6 +12,7 @@
 		091096DF167E7EB800B94984 /* CJIMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091096DE167E7EB800B94984 /* CJIMLoginViewController.m */; };
 		09525610167ED56A0073755C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0952560F167ED56A0073755C /* User.m */; };
 		09525614167EE9FC0073755C /* CJIMNewMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09525613167EE9FC0073755C /* CJIMNewMessageController.m */; };
+		0952561F167F0CF10073755C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 0952561E167F0CF10073755C /* Message.m */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -19,7 +20,6 @@
 		098118B4167CCE10004C0C82 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B3167CCE10004C0C82 /* libz.dylib */; };
 		098118B6167CCE28004C0C82 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B5167CCE28004C0C82 /* libicucore.dylib */; };
 		098118C6167CD05C004C0C82 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 098118C5167CD05C004C0C82 /* Location.m */; };
-		09811905167CD317004C0C82 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 09811904167CD317004C0C82 /* Message.m */; };
 		09D8D13E167CCA070000BAA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D13D167CCA070000BAA0 /* UIKit.framework */; };
 		09D8D140167CCA070000BAA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D13F167CCA070000BAA0 /* Foundation.framework */; };
 		09D8D142167CCA070000BAA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D141167CCA070000BAA0 /* CoreGraphics.framework */; };
@@ -45,6 +45,8 @@
 		0952560F167ED56A0073755C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		09525612167EE9FC0073755C /* CJIMNewMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMNewMessageController.h; sourceTree = "<group>"; };
 		09525613167EE9FC0073755C /* CJIMNewMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMNewMessageController.m; sourceTree = "<group>"; };
+		0952561D167F0CF10073755C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		0952561E167F0CF10073755C /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -53,8 +55,6 @@
 		098118B5167CCE28004C0C82 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		098118C4167CD05C004C0C82 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		098118C5167CD05C004C0C82 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		09811903167CD317004C0C82 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		09811904167CD317004C0C82 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		09D8D139167CCA070000BAA0 /* ImFamilyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImFamilyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D8D13D167CCA070000BAA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09D8D13F167CCA070000BAA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,10 +148,10 @@
 				09D8D160167CCA070000BAA0 /* CJIMDetailViewController.h */,
 				09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */,
 				09D8D15A167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld */,
+				0952561D167F0CF10073755C /* Message.h */,
+				0952561E167F0CF10073755C /* Message.m */,
 				0952560E167ED56A0073755C /* User.h */,
 				0952560F167ED56A0073755C /* User.m */,
-				09811903167CD317004C0C82 /* Message.h */,
-				09811904167CD317004C0C82 /* Message.m */,
 				098118C4167CD05C004C0C82 /* Location.h */,
 				098118C5167CD05C004C0C82 /* Location.m */,
 				09D8D146167CCA070000BAA0 /* Supporting Files */,
@@ -249,10 +249,10 @@
 				09D8D15F167CCA070000BAA0 /* CJIMMasterViewController.m in Sources */,
 				09D8D162167CCA070000BAA0 /* CJIMDetailViewController.m in Sources */,
 				098118C6167CD05C004C0C82 /* Location.m in Sources */,
-				09811905167CD317004C0C82 /* Message.m in Sources */,
 				091096DF167E7EB800B94984 /* CJIMLoginViewController.m in Sources */,
 				09525610167ED56A0073755C /* User.m in Sources */,
 				09525614167EE9FC0073755C /* CJIMNewMessageController.m in Sources */,
+				0952561F167F0CF10073755C /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
