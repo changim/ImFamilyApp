@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter message here." translatesAutoresizingMaskIntoConstraints="NO" id="La5-6e-KD5">
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -114,8 +114,6 @@
                                 </connections>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title here." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="75L-cN-zCt">
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
@@ -159,39 +157,56 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-ms-oQr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-ms-oQr">
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="qx4-RR-w76"/>
+                                </constraints>
                                 <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Datetime" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9m-NL-ISU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Datetime" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9m-NL-ISU">
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="oUj-bq-URZ"/>
+                                </constraints>
                                 <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Author" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOs-Wa-0XH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Author" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOs-Wa-0XH">
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="pEy-dN-2Sj"/>
+                                </constraints>
                                 <color key="textColor" red="0.97098823229999998" green="1" blue="0.88149121509999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-------------------------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LY-HJ-Qih">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xrJ-Gi-Vtg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7Vy-Hu-KIC"/>
+                            <constraint firstItem="8LY-HJ-Qih" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7f7-Mn-TJf"/>
                             <constraint firstItem="j8a-ms-oQr" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Big-oq-gyy"/>
-                            <constraint firstItem="YOs-Wa-0XH" firstAttribute="top" secondItem="j8a-ms-oQr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CVw-T6-cIT"/>
+                            <constraint firstItem="YOs-Wa-0XH" firstAttribute="top" secondItem="j8a-ms-oQr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="J8U-rz-Tz5"/>
                             <constraint firstAttribute="trailing" secondItem="YOs-Wa-0XH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KeR-eq-J0C"/>
-                            <constraint firstItem="h9m-NL-ISU" firstAttribute="top" secondItem="YOs-Wa-0XH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WSz-5b-yDl"/>
+                            <constraint firstAttribute="trailing" secondItem="8LY-HJ-Qih" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Kew-l5-4tO"/>
+                            <constraint firstAttribute="bottom" secondItem="xrJ-Gi-Vtg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="LzC-Bk-Qx2"/>
+                            <constraint firstItem="h9m-NL-ISU" firstAttribute="top" secondItem="YOs-Wa-0XH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RAD-VS-CFu"/>
                             <constraint firstAttribute="trailing" secondItem="xrJ-Gi-Vtg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="at8-bl-uP6"/>
                             <constraint firstItem="h9m-NL-ISU" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c6T-NM-jdw"/>
                             <constraint firstItem="xrJ-Gi-Vtg" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eOb-83-iPd"/>
                             <constraint firstItem="j8a-ms-oQr" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fZD-jO-heK"/>
                             <constraint firstAttribute="trailing" secondItem="j8a-ms-oQr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i27-EI-Key"/>
+                            <constraint firstItem="xrJ-Gi-Vtg" firstAttribute="top" secondItem="8LY-HJ-Qih" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="k04-Vl-Hag"/>
                             <constraint firstAttribute="trailing" secondItem="h9m-NL-ISU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k0z-Ss-A8L"/>
-                            <constraint firstItem="xrJ-Gi-Vtg" firstAttribute="top" secondItem="h9m-NL-ISU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y5o-9I-4Xb"/>
+                            <constraint firstItem="8LY-HJ-Qih" firstAttribute="top" secondItem="h9m-NL-ISU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="r6y-rX-RBS"/>
                             <constraint firstItem="YOs-Wa-0XH" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zVF-eG-ocV"/>
                         </constraints>
                     </view>

@@ -42,6 +42,7 @@
         
         NSString *authorIs = @"From: ";
         self.authorLabel.text = [authorIs stringByAppendingString:[[[self.detailItem valueForKey:@"user"] valueForKey:@"name"] description]];
+        self.authorLabel.enabled =NO;
         
         NSString *dateIs = @"Posted at: ";
         NSDate *date = [self.detailItem valueForKey:@"createdAt"];
