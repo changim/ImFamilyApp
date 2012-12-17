@@ -9,6 +9,7 @@
 #import "CJIMMasterViewController.h"
 
 #import "CJIMDetailViewController.h"
+#import "CJIMLoginViewController.h"
 
 @interface CJIMMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -29,6 +30,9 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    CJIMLoginViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+    [self presentViewController:loginVC animated:YES completion: nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,10 +47,16 @@
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
+    NSString *dobString =@"05/14/1962";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSDate *dob = [formatter dateFromString:dobString];
+    
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:@"new message title" forKey:@"title"];
-    [newManagedObject setValue:@"new message body" forKey:@"body"];
+    [newManagedObject setValue:@"Dad" forKey:@"name"];
+    [newManagedObject setValue:@"1234" forKey:@"password"];
+    [newManagedObject setValue:dob forKey:@"dateOfBirth"];
     
     // Save the context.
     NSError *error = nil;
@@ -125,14 +135,14 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Message" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -217,7 +227,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"title"] description];
+    cell.textLabel.text = [[object valueForKey:@"name"] description];
 }
 
 @end

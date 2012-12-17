@@ -9,17 +9,17 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "SPDiffable.h"
 
 @class SPMember;
 @class SPGhost;
-@class SPEntityDefinition;
-@class SPObjectManager;
+@class SPBucket;
 
-@interface SPManagedObject : NSManagedObject {
+@interface SPManagedObject : NSManagedObject <SPDiffable> {
 	// The entity's member data as last seen by the server, stored in dictionary form for diffing
 	// has key, data, and signature
 	SPGhost *ghost;
-    SPEntityDefinition *definition;
+    SPBucket *bucket;
     
     NSString *simperiumKey;
     NSString *ghostData;
@@ -29,19 +29,13 @@
 }
 
 @property (retain, nonatomic) SPGhost *ghost;
-@property (assign, nonatomic) SPEntityDefinition *definition;
+@property (assign, nonatomic) SPBucket *bucket;
 @property (copy, nonatomic) NSString *ghostData;
 @property (copy, nonatomic) NSString *simperiumKey;
 @property (assign, nonatomic) BOOL updateWaiting;
 
-+(void)initDefinitions:(NSDictionary *)definitions;
 -(void)loadMemberData:(NSDictionary *)dictionary;
 -(NSDictionary *)dictionary;
--(NSMutableDictionary *)diffForAddition;
--(NSDictionary *)diffWithDictionary:(NSDictionary *)dict;
--(void)applyDiff:(NSDictionary *)diff;
--(void)applyGhostDiff:(NSDictionary *)diff;
--(NSDictionary *)transformDiff:(NSDictionary *)diff oldDiff:(NSDictionary *)oldDiff oldGhost:(SPGhost *)oldGhost;
 -(NSString *)version;
 
 @end

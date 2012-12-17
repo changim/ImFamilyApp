@@ -9,6 +9,13 @@
 #import "CJIMAppDelegate.h"
 
 #import "CJIMMasterViewController.h"
+#import <Simperium/SPAuthenticationManager.h>
+@interface CJIMAppDelegate () {
+    NSMutableArray *_objects;
+    NSMutableData *_data;
+    SPAuthenticationManager *_authenticationManager;
+}
+@end
 
 @implementation CJIMAppDelegate
 
@@ -26,18 +33,58 @@
     self.simperium = [[Simperium alloc] initWithRootViewController:
                       _window.rootViewController];
     
-    [self.simperium setAuthenticationEnabled:NO];
     
-    [self.simperium startWithAppID:@"dawn-carts-884"
-                            APIKey:@"61e833ca9dd24d1cb8011cc1ca6df5ad"
+    /* seed me as family member
+    NSString *url = @"https://api.simperium.com/1/clip-hushes-0ee/user/i/james";
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"POST"];
+    NSString *data = [NSString stringWithFormat:@"{\"name\":\"James\", \"password\":\"1234\"}"];
+    [request setHTTPBody:[data dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setValue:@"a072e56ad97b4491a3d5fbd70addfe7d"		forHTTPHeaderField:@"X-Simperium-Token"];
+    
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];*/
+    
+    // start simperium
+    self.simperium.authenticationEnabled = NO;
+    [self.simperium startWithAppID:@"clip-hushes-0ee"
+                            APIKey:@"29b748a1ab8b490e83fef18299abd593"
                              model:[self managedObjectModel]
                            context:[self managedObjectContext]
                        coordinator:[self persistentStoreCoordinator]];
     
+    // authenticate user on simperium
+    _authenticationManager = [[SPAuthenticationManager alloc] initWithDelegate:self.simperium simperium:self.simperium];
     
+    [_authenticationManager authenticateWithUsername:@"everyone@im.com" password:@"1234"
+                                             success:^{}
+                                            failure:^(int responseCode, NSString *responseString){NSLog(@"fail: %@",responseString);}];
     
     return YES;
 }
+/*
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    _data = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [_data appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"%@",error.localizedDescription);
+    abort();
+    // Please do something sensible here, like log the error.
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    //NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:_data options:0 error:nil];
+    NSString *responseText = [[NSString alloc] initWithData:_data encoding:NSUTF8StringEncoding];
+    //self.simperium.user = [[SPUser alloc] initWithEmail:[responseDictionary objectForKey:@"username"]
+                                                   //token:[responseDictionary objectForKey:@"access_token"]];
+    // Do anything you want with it
+    NSLog(@"response text: %@ %@", responseText, self.simperium.user.authenticated ? @"YES" : @"NO");
+}*/
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -47,12 +94,17 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    //[self.simperium signOutAndRemoveLocalData:YES];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    /*[_authenticationManager authenticateWithUsername:@"everyone@im.com" password:@"1234"
+                                             success:^{}
+                                             failure:^(int responseCode, NSString *responseString){NSLog(@"fail: %@",responseString);}];*/
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
