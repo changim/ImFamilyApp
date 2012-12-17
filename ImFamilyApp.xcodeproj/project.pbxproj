@@ -10,13 +10,13 @@
 		091096CF167DB35500B94984 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091096CE167DB35500B94984 /* LoginView.xib */; };
 		091096D1167DB36200B94984 /* Simperium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091096D0167DB36200B94984 /* Simperium.framework */; };
 		091096DF167E7EB800B94984 /* CJIMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091096DE167E7EB800B94984 /* CJIMLoginViewController.m */; };
+		09525610167ED56A0073755C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0952560F167ED56A0073755C /* User.m */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
 		098118B2167CCC17004C0C82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B1167CCC17004C0C82 /* Security.framework */; };
 		098118B4167CCE10004C0C82 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B3167CCE10004C0C82 /* libz.dylib */; };
 		098118B6167CCE28004C0C82 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118B5167CCE28004C0C82 /* libicucore.dylib */; };
-		098118C0167CD05B004C0C82 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 098118BF167CD05B004C0C82 /* User.m */; };
 		098118C6167CD05C004C0C82 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 098118C5167CD05C004C0C82 /* Location.m */; };
 		09811905167CD317004C0C82 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 09811904167CD317004C0C82 /* Message.m */; };
 		09D8D13E167CCA070000BAA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D8D13D167CCA070000BAA0 /* UIKit.framework */; };
@@ -40,14 +40,14 @@
 		091096D0167DB36200B94984 /* Simperium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simperium.framework; sourceTree = "<group>"; };
 		091096DD167E7EB800B94984 /* CJIMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMLoginViewController.h; sourceTree = "<group>"; };
 		091096DE167E7EB800B94984 /* CJIMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMLoginViewController.m; sourceTree = "<group>"; };
+		0952560E167ED56A0073755C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0952560F167ED56A0073755C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		098118B1167CCC17004C0C82 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		098118B3167CCE10004C0C82 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		098118B5167CCE28004C0C82 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		098118BE167CD05B004C0C82 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		098118BF167CD05B004C0C82 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		098118C4167CD05C004C0C82 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		098118C5167CD05C004C0C82 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		09811903167CD317004C0C82 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -145,12 +145,12 @@
 				09D8D160167CCA070000BAA0 /* CJIMDetailViewController.h */,
 				09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */,
 				09D8D15A167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld */,
+				0952560E167ED56A0073755C /* User.h */,
+				0952560F167ED56A0073755C /* User.m */,
 				09811903167CD317004C0C82 /* Message.h */,
 				09811904167CD317004C0C82 /* Message.m */,
 				098118C4167CD05C004C0C82 /* Location.h */,
 				098118C5167CD05C004C0C82 /* Location.m */,
-				098118BE167CD05B004C0C82 /* User.h */,
-				098118BF167CD05B004C0C82 /* User.m */,
 				09D8D146167CCA070000BAA0 /* Supporting Files */,
 			);
 			path = ImFamilyApp;
@@ -243,10 +243,10 @@
 				09D8D15C167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld in Sources */,
 				09D8D15F167CCA070000BAA0 /* CJIMMasterViewController.m in Sources */,
 				09D8D162167CCA070000BAA0 /* CJIMDetailViewController.m in Sources */,
-				098118C0167CD05B004C0C82 /* User.m in Sources */,
 				098118C6167CD05C004C0C82 /* Location.m in Sources */,
 				09811905167CD317004C0C82 /* Message.m in Sources */,
 				091096DF167E7EB800B94984 /* CJIMLoginViewController.m in Sources */,
+				09525610167ED56A0073755C /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

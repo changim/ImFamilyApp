@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CJIMLoginViewController : UIViewController
+
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end
