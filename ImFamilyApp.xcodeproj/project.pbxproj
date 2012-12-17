@@ -14,6 +14,17 @@
 		09525614167EE9FC0073755C /* CJIMNewMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09525613167EE9FC0073755C /* CJIMNewMessageController.m */; };
 		0952561F167F0CF10073755C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 0952561E167F0CF10073755C /* Message.m */; };
 		09525622167F2F8E0073755C /* CJIMCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */; };
+		09525628167F6DDA0073755C /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525627167F6DDA0073755C /* 83-calendar.png */; };
+		0952562A167F6E020073755C /* 179-notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525629167F6E010073755C /* 179-notepad.png */; };
+		0952562C167F6E1E0073755C /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 0952562B167F6E1E0073755C /* 123-id-card.png */; };
+		0952562E167F6E480073755C /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 0952562D167F6E480073755C /* 112-group.png */; };
+		09525630167F6E700073755C /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 0952562F167F6E700073755C /* 18-envelope.png */; };
+		09525632167F6E7B0073755C /* 09-chat-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525631167F6E7B0073755C /* 09-chat-2.png */; };
+		09525634167F6E810073755C /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525633167F6E810073755C /* 08-chat.png */; };
+		09525636167F6E8B0073755C /* 07-map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525635167F6E8B0073755C /* 07-map-marker.png */; };
+		09525638167F6EAA0073755C /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525637167F6EAA0073755C /* 53-house.png */; };
+		0952563A167F6EBB0073755C /* 56-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525639167F6EBB0073755C /* 56-cloud.png */; };
+		0952563C167F6EF20073755C /* 124-bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0952563B167F6EF20073755C /* 124-bullhorn.png */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -50,6 +61,17 @@
 		0952561E167F0CF10073755C /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		09525620167F2F8E0073755C /* CJIMCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMCustomTableViewCell.h; sourceTree = "<group>"; };
 		09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMCustomTableViewCell.m; sourceTree = "<group>"; };
+		09525627167F6DDA0073755C /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
+		09525629167F6E010073755C /* 179-notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad.png"; sourceTree = "<group>"; };
+		0952562B167F6E1E0073755C /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
+		0952562D167F6E480073755C /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		0952562F167F6E700073755C /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope.png"; sourceTree = "<group>"; };
+		09525631167F6E7B0073755C /* 09-chat-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-chat-2.png"; sourceTree = "<group>"; };
+		09525633167F6E810073755C /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-chat.png"; sourceTree = "<group>"; };
+		09525635167F6E8B0073755C /* 07-map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-map-marker.png"; sourceTree = "<group>"; };
+		09525637167F6EAA0073755C /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
+		09525639167F6EBB0073755C /* 56-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "56-cloud.png"; sourceTree = "<group>"; };
+		0952563B167F6EF20073755C /* 124-bullhorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "124-bullhorn.png"; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -169,6 +191,17 @@
 		09D8D146167CCA070000BAA0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0952563B167F6EF20073755C /* 124-bullhorn.png */,
+				09525639167F6EBB0073755C /* 56-cloud.png */,
+				09525637167F6EAA0073755C /* 53-house.png */,
+				09525635167F6E8B0073755C /* 07-map-marker.png */,
+				09525633167F6E810073755C /* 08-chat.png */,
+				09525631167F6E7B0073755C /* 09-chat-2.png */,
+				0952562F167F6E700073755C /* 18-envelope.png */,
+				0952562D167F6E480073755C /* 112-group.png */,
+				09525629167F6E010073755C /* 179-notepad.png */,
+				0952562B167F6E1E0073755C /* 123-id-card.png */,
+				09525627167F6DDA0073755C /* 83-calendar.png */,
 				09D8D147167CCA070000BAA0 /* ImFamilyApp-Info.plist */,
 				09D8D148167CCA070000BAA0 /* InfoPlist.strings */,
 				09D8D14B167CCA070000BAA0 /* main.m */,
@@ -238,6 +271,17 @@
 				09D8D156167CCA070000BAA0 /* Default-568h@2x.png in Resources */,
 				09D8D159167CCA070000BAA0 /* MainStoryboard.storyboard in Resources */,
 				091096CF167DB35500B94984 /* LoginView.xib in Resources */,
+				09525628167F6DDA0073755C /* 83-calendar.png in Resources */,
+				0952562A167F6E020073755C /* 179-notepad.png in Resources */,
+				0952562C167F6E1E0073755C /* 123-id-card.png in Resources */,
+				0952562E167F6E480073755C /* 112-group.png in Resources */,
+				09525630167F6E700073755C /* 18-envelope.png in Resources */,
+				09525632167F6E7B0073755C /* 09-chat-2.png in Resources */,
+				09525634167F6E810073755C /* 08-chat.png in Resources */,
+				09525636167F6E8B0073755C /* 07-map-marker.png in Resources */,
+				09525638167F6EAA0073755C /* 53-house.png in Resources */,
+				0952563A167F6EBB0073755C /* 56-cloud.png in Resources */,
+				0952563C167F6EF20073755C /* 124-bullhorn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

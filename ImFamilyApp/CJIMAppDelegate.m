@@ -27,7 +27,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    UITabBarController *tabbarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navigationController = (UINavigationController *)[tabbarController.viewControllers objectAtIndex:0];
     CJIMMasterViewController *controller = (CJIMMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     

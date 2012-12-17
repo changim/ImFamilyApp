@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="FamilyOccasion" parentEntity="SPManagedObject" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="createdBy" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
     <entity name="Location" representedClassName="Location" parentEntity="SPManagedObject" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -25,5 +31,6 @@
         <element name="Message" positionX="214" positionY="14" width="128" height="105"/>
         <element name="SPManagedObject" positionX="187" positionY="258" width="128" height="75"/>
         <element name="User" positionX="-126" positionY="27" width="128" height="105"/>
+        <element name="FamilyOccasion" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>
