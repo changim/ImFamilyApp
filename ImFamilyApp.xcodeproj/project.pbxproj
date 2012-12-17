@@ -25,6 +25,7 @@
 		09525638167F6EAA0073755C /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525637167F6EAA0073755C /* 53-house.png */; };
 		0952563A167F6EBB0073755C /* 56-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 09525639167F6EBB0073755C /* 56-cloud.png */; };
 		0952563C167F6EF20073755C /* 124-bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0952563B167F6EF20073755C /* 124-bullhorn.png */; };
+		095341FC167F7A52004B8E1B /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 095341FB167F7A52004B8E1B /* Kal.bundle */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -47,6 +48,23 @@
 		09D8D15F167CCA070000BAA0 /* CJIMMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D8D15E167CCA070000BAA0 /* CJIMMasterViewController.m */; };
 		09D8D162167CCA070000BAA0 /* CJIMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		095341F7167F7975004B8E1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095341F0167F7975004B8E1B /* Kal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Kal;
+		};
+		095341F9167F7A38004B8E1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095341F0167F7975004B8E1B /* Kal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Kal;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		091096CE167DB35500B94984 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -72,6 +90,10 @@
 		09525637167F6EAA0073755C /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
 		09525639167F6EBB0073755C /* 56-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "56-cloud.png"; sourceTree = "<group>"; };
 		0952563B167F6EF20073755C /* 124-bullhorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "124-bullhorn.png"; sourceTree = "<group>"; };
+		095341E7167F7724004B8E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		095341E9167F772A004B8E1B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		095341F0167F7975004B8E1B /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
+		095341FB167F7A52004B8E1B /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -124,9 +146,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095341F1167F7975004B8E1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				095341F8167F7975004B8E1B /* libKal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		09D8D12E167CCA070000BAA0 = {
 			isa = PBXGroup;
 			children = (
+				095341FB167F7A52004B8E1B /* Kal.bundle */,
+				095341F0167F7975004B8E1B /* Kal.xcodeproj */,
+				095341E9167F772A004B8E1B /* QuartzCore.framework */,
+				095341E7167F7724004B8E1B /* MapKit.framework */,
 				098118B5167CCE28004C0C82 /* libicucore.dylib */,
 				098118B3167CCE10004C0C82 /* libz.dylib */,
 				098118B1167CCC17004C0C82 /* Security.framework */,
@@ -227,6 +261,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				095341FA167F7A38004B8E1B /* PBXTargetDependency */,
 			);
 			name = ImFamilyApp;
 			productName = ImFamilyApp;
@@ -253,12 +288,28 @@
 			mainGroup = 09D8D12E167CCA070000BAA0;
 			productRefGroup = 09D8D13A167CCA070000BAA0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 095341F1167F7975004B8E1B /* Products */;
+					ProjectRef = 095341F0167F7975004B8E1B /* Kal.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				09D8D138167CCA070000BAA0 /* ImFamilyApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		095341F8167F7975004B8E1B /* libKal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKal.a;
+			remoteRef = 095341F7167F7975004B8E1B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		09D8D137167CCA070000BAA0 /* Resources */ = {
@@ -282,6 +333,7 @@
 				09525638167F6EAA0073755C /* 53-house.png in Resources */,
 				0952563A167F6EBB0073755C /* 56-cloud.png in Resources */,
 				0952563C167F6EF20073755C /* 124-bullhorn.png in Resources */,
+				095341FC167F7A52004B8E1B /* Kal.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +359,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		095341FA167F7A38004B8E1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kal;
+			targetProxy = 095341F9167F7A38004B8E1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09D8D148167CCA070000BAA0 /* InfoPlist.strings */ = {
@@ -387,6 +447,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImFamilyApp/ImFamilyApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = Kal/src;
 				INFOPLIST_FILE = "ImFamilyApp/ImFamilyApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -403,6 +464,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImFamilyApp/ImFamilyApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = Kal/src;
 				INFOPLIST_FILE = "ImFamilyApp/ImFamilyApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
