@@ -10,6 +10,7 @@
 
 #import "CJIMMasterViewController.h"
 #import <Simperium/SPAuthenticationManager.h>
+
 @interface CJIMAppDelegate () {
     NSMutableArray *_objects;
     NSMutableData *_data;

@@ -17,12 +17,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="64"/>
+            <point key="canvasLocation" x="-493" y="88"/>
         </scene>
-        <!--Master View Controller - Master-->
+        <!--Master View Controller - Messages-->
         <scene sceneID="18">
             <objects>
-                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="CJIMMasterViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="" title="Messages" id="12" customClass="CJIMMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,15 +59,69 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Message Board" id="36"/>
+                    <connections>
+                        <segue destination="zTN-bJ-ZdF" kind="push" id="wum-EE-NBz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="455" y="96"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--New Message Controller - New Message-->
+        <scene sceneID="rAE-Kg-tlU">
+            <objects>
+                <viewController title="New Message" id="zTN-bJ-ZdF" customClass="CJIMNewMessageController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nmu-zR-Bb6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGz-qy-qRS">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JWa-fk-iCf">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEX-1t-AY1">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nEX-1t-AY1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="52C-hL-0At"/>
+                                    <constraint firstItem="JWa-fk-iCf" firstAttribute="leading" secondItem="lGz-qy-qRS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Dee-Fg-ghT"/>
+                                    <constraint firstItem="nEX-1t-AY1" firstAttribute="top" secondItem="JWa-fk-iCf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IBh-Mh-diq"/>
+                                    <constraint firstItem="nEX-1t-AY1" firstAttribute="leading" secondItem="lGz-qy-qRS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Mdb-8s-hXc"/>
+                                    <constraint firstAttribute="bottom" secondItem="nEX-1t-AY1" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Yjo-hd-k2U"/>
+                                    <constraint firstItem="JWa-fk-iCf" firstAttribute="top" secondItem="lGz-qy-qRS" secondAttribute="top" constant="20" symbolic="YES" type="default" id="opT-T6-YyF"/>
+                                    <constraint firstAttribute="trailing" secondItem="JWa-fk-iCf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xVL-eY-Tbh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lGz-qy-qRS" firstAttribute="leading" secondItem="Nmu-zR-Bb6" secondAttribute="leading" type="default" id="4HW-dK-LqV"/>
+                            <constraint firstItem="lGz-qy-qRS" firstAttribute="top" secondItem="Nmu-zR-Bb6" secondAttribute="top" type="default" id="5QJ-Ik-TP7"/>
+                            <constraint firstItem="lGz-qy-qRS" firstAttribute="trailing" secondItem="Nmu-zR-Bb6" secondAttribute="trailing" type="default" id="M55-30-Ieg"/>
+                            <constraint firstItem="lGz-qy-qRS" firstAttribute="bottom" secondItem="Nmu-zR-Bb6" secondAttribute="bottom" type="default" id="N9J-qD-zSo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Message" id="l0V-4v-iEl"/>
+                    <connections>
+                        <outlet property="body" destination="nEX-1t-AY1" id="Ojr-J3-p9x"/>
+                        <outlet property="title" destination="JWa-fk-iCf" id="Yq8-5s-e3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDA-Vs-V8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="-275"/>
+        </scene>
+        <!--Detail View Controller - Show Message-->
         <scene sceneID="24">
             <objects>
-                <viewController storyboardIdentifier="" title="Detail" id="21" customClass="CJIMDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="" title="Show Message" id="21" customClass="CJIMDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="1006" y="464"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="RTA-jL-qKl">
@@ -146,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72E-fs-vSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="-817"/>
+            <point key="canvasLocation" x="-8" y="96"/>
         </scene>
     </scenes>
     <classes>
@@ -165,6 +219,13 @@
         </class>
         <class className="CJIMMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CJIMMasterViewController.h"/>
+        </class>
+        <class className="CJIMNewMessageController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CJIMNewMessageController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="body" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="title" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

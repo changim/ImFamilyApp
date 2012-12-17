@@ -9,6 +9,8 @@
 #import "CJIMLoginViewController.h"
 #import "User.h"
 
+#import "CJIMAppDelegate.h"
+
 @interface CJIMLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -57,6 +59,7 @@
         User *user = (User*) [queryResult objectAtIndex:0];
         if ([user.password isEqualToString:self.password.text]) {
             NSLog(@"login successful");
+            ((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]).currentUser = user;
             [self dismissModalViewControllerAnimated:YES];
             return;
         } else {
