@@ -27,6 +27,15 @@ functionalities in terms of zooming in and out and moving around. All of the
 data is stored and synced instantly with messages, events, and locations all
 belonging to the correct users.
 
+How to play with it (test it):
+Log in with "James" "Dad" "Mom" or "Paul" for the name, and "1234" for the 
+password for all of them. You can create, browse, and view messages and
+events pretty intuitively in their respective tabs. In "Where is everyone?"
+click on the buttons with the family members' names to move the map to
+where everyone is. I have logged in as different members with different
+current location settings in the iPhone simulator to put people in different
+places.
+
 Resources:
 Backend: I used Simperium API to sync all of my core data.
 
