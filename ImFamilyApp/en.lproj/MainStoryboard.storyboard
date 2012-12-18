@@ -182,14 +182,94 @@
                                     <action selector="centerMapToCurrentUserLocation:" destination="uul-XN-qE2" eventType="touchUpInside" id="Wkl-tp-EKi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1L-Qr-hi6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="rXG-9Y-93o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Mom">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMapToUserLocation:" destination="uul-XN-qE2" eventType="touchUpInside" id="y8e-In-RtB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-vh-JAS">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RXA-nf-9wb"/>
+                                    <constraint firstAttribute="width" constant="59" id="a4D-Bs-iKt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Paul">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMapToUserLocation:" destination="uul-XN-qE2" eventType="touchUpInside" id="hP7-zS-1dA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-ET-n9N">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="mqh-JT-W4F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="James">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMapToUserLocation:" destination="uul-XN-qE2" eventType="touchUpInside" id="7jK-Qj-YRw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ico-sS-2Ei">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="wMw-wk-Uqy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Dad">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMapToUserLocation:" destination="uul-XN-qE2" eventType="touchUpInside" id="Nwy-bc-NIV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ohd-zP-x9C" firstAttribute="trailing" secondItem="LA6-gu-KsY" secondAttribute="trailing" type="default" id="BVs-aU-vTm"/>
+                            <constraint firstItem="dsv-ET-n9N" firstAttribute="top" secondItem="LPI-vh-JAS" secondAttribute="top" type="default" id="33O-RM-CR4"/>
+                            <constraint firstItem="Ohd-zP-x9C" firstAttribute="trailing" secondItem="LA6-gu-KsY" secondAttribute="trailing" type="default" id="3nI-oE-K9e"/>
+                            <constraint firstAttribute="bottom" secondItem="X1L-Qr-hi6" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="3yR-tf-AFH"/>
+                            <constraint firstItem="dsv-ET-n9N" firstAttribute="top" secondItem="Z6H-ot-kgL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DSa-OQ-hgI"/>
+                            <constraint firstItem="Ico-sS-2Ei" firstAttribute="leading" secondItem="LA6-gu-KsY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EeU-q1-BM9"/>
+                            <constraint firstAttribute="bottom" secondItem="dsv-ET-n9N" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Hq3-AJ-Yxz"/>
                             <constraint firstItem="Ohd-zP-x9C" firstAttribute="leading" secondItem="LA6-gu-KsY" secondAttribute="leading" type="default" id="S29-71-Kw6"/>
+                            <constraint firstItem="X1L-Qr-hi6" firstAttribute="leading" secondItem="LA6-gu-KsY" secondAttribute="leading" constant="95" id="Vvi-EU-LtY"/>
+                            <constraint firstAttribute="trailing" secondItem="LPI-vh-JAS" secondAttribute="trailing" constant="93" id="YQA-Ui-UnB"/>
+                            <constraint firstAttribute="bottom" secondItem="Ico-sS-2Ei" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ZN5-Zg-7Xm"/>
+                            <constraint firstAttribute="bottom" secondItem="LPI-vh-JAS" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aoO-NN-kSJ"/>
+                            <constraint firstItem="LPI-vh-JAS" firstAttribute="top" secondItem="X1L-Qr-hi6" secondAttribute="top" type="default" id="lf6-aJ-fQs"/>
                             <constraint firstItem="Ohd-zP-x9C" firstAttribute="top" secondItem="LA6-gu-KsY" secondAttribute="top" type="default" id="mmV-7x-v4q"/>
-                            <constraint firstAttribute="bottom" secondItem="Z6H-ot-kgL" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="rVQ-oD-QI5"/>
-                            <constraint firstItem="Z6H-ot-kgL" firstAttribute="leading" secondItem="LA6-gu-KsY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tHh-qP-nCB"/>
+                            <constraint firstAttribute="trailing" secondItem="dsv-ET-n9N" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="otS-dQ-xrp"/>
+                            <constraint firstItem="X1L-Qr-hi6" firstAttribute="top" secondItem="Ico-sS-2Ei" secondAttribute="top" type="default" id="p8A-6L-Nrd"/>
+                            <constraint firstAttribute="trailing" secondItem="Z6H-ot-kgL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r4v-OW-WpK"/>
                             <constraint firstItem="Ohd-zP-x9C" firstAttribute="bottom" secondItem="LA6-gu-KsY" secondAttribute="bottom" type="default" id="voe-Qs-Glu"/>
                         </constraints>
                     </view>
@@ -580,6 +660,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CJIMMapViewController.h"/>
             <relationships>
                 <relationship kind="action" name="centerMapToCurrentUserLocation:"/>
+                <relationship kind="action" name="centerMapToUserLocation:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
