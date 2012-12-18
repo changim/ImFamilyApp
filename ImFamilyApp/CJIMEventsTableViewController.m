@@ -201,8 +201,8 @@
     
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSString *quotationMark = @"\"";
-    NSString *isAt = @"\" at ";
-    customCell.titleLabel.text = [[quotationMark stringByAppendingString:[[object valueForKey:@"title"] description]] stringByAppendingString:isAt];
+    NSString *at = @"at ";
+    customCell.titleLabel.text = [[quotationMark stringByAppendingString:[[object valueForKey:@"title"] description]] stringByAppendingString:quotationMark];
     
     //customCell.titleLabel.text = [[object valueForKey:@"title"] description];
     NSString *createdBy = @"Created by: ";
@@ -215,7 +215,7 @@
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     [dateFormatter setLocale:usLocale];
-    customCell.dateLabel.text = [dateFormatter stringFromDate:date];
+    customCell.dateLabel.text = [at stringByAppendingString:[dateFormatter stringFromDate:date]];
 }
 
 @end
