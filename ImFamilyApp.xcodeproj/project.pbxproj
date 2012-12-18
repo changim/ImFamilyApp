@@ -28,6 +28,13 @@
 		095341FC167F7A52004B8E1B /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 095341FB167F7A52004B8E1B /* Kal.bundle */; };
 		0953420A167F83D3004B8E1B /* src in Resources */ = {isa = PBXBuildFile; fileRef = 09534209167F83D3004B8E1B /* src */; };
 		0953420F167F891E004B8E1B /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 0953420E167F891E004B8E1B /* 103-map.png */; };
+		09534360167FD81B004B8E1B /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0953435F167FD81B004B8E1B /* main_icon.png */; };
+		09534362167FD93E004B8E1B /* 121-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 09534361167FD93E004B8E1B /* 121-landscape.png */; };
+		09534364167FD94E004B8E1B /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 09534363167FD94E004B8E1B /* 86-camera.png */; };
+		09534366167FD961004B8E1B /* 42-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 09534365167FD961004B8E1B /* 42-photos.png */; };
+		0953436E167FE030004B8E1B /* CJIMEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953436D167FE030004B8E1B /* CJIMEventsTableViewController.m */; };
+		09534371167FE28B004B8E1B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09534370167FE28B004B8E1B /* Event.m */; };
+		09534374167FE413004B8E1B /* CJIMNewEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09534373167FE413004B8E1B /* CJIMNewEventController.m */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -80,6 +87,16 @@
 		095341FB167F7A52004B8E1B /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		09534209167F83D3004B8E1B /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
 		0953420E167F891E004B8E1B /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		0953435F167FD81B004B8E1B /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
+		09534361167FD93E004B8E1B /* 121-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "121-landscape.png"; sourceTree = "<group>"; };
+		09534363167FD94E004B8E1B /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		09534365167FD961004B8E1B /* 42-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos.png"; sourceTree = "<group>"; };
+		0953436C167FE030004B8E1B /* CJIMEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMEventsTableViewController.h; sourceTree = "<group>"; };
+		0953436D167FE030004B8E1B /* CJIMEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMEventsTableViewController.m; sourceTree = "<group>"; };
+		0953436F167FE28B004B8E1B /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		09534370167FE28B004B8E1B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		09534372167FE413004B8E1B /* CJIMNewEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMNewEventController.h; sourceTree = "<group>"; };
+		09534373167FE413004B8E1B /* CJIMNewEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMNewEventController.m; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -88,7 +105,7 @@
 		098118B5167CCE28004C0C82 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		098118C4167CD05C004C0C82 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		098118C5167CD05C004C0C82 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		09D8D139167CCA070000BAA0 /* ImFamilyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImFamilyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09D8D139167CCA070000BAA0 /* KpImInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KpImInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D8D13D167CCA070000BAA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09D8D13F167CCA070000BAA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09D8D141167CCA070000BAA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,18 +149,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09534367167FD995004B8E1B /* Message Board */ = {
+			isa = PBXGroup;
+			children = (
+				09525612167EE9FC0073755C /* CJIMNewMessageController.h */,
+				09525613167EE9FC0073755C /* CJIMNewMessageController.m */,
+				09D8D160167CCA070000BAA0 /* CJIMDetailViewController.h */,
+				09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */,
+				09D8D15D167CCA070000BAA0 /* CJIMMasterViewController.h */,
+				09D8D15E167CCA070000BAA0 /* CJIMMasterViewController.m */,
+				091096DD167E7EB800B94984 /* CJIMLoginViewController.h */,
+				091096DE167E7EB800B94984 /* CJIMLoginViewController.m */,
+			);
+			name = "Message Board";
+			sourceTree = "<group>";
+		};
+		09534368167FD9BE004B8E1B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				09D8D15A167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld */,
+				0953436F167FE28B004B8E1B /* Event.h */,
+				09534370167FE28B004B8E1B /* Event.m */,
+				0952561D167F0CF10073755C /* Message.h */,
+				0952561E167F0CF10073755C /* Message.m */,
+				0952560E167ED56A0073755C /* User.h */,
+				0952560F167ED56A0073755C /* User.m */,
+				098118C4167CD05C004C0C82 /* Location.h */,
+				098118C5167CD05C004C0C82 /* Location.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		09534369167FD9D0004B8E1B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				09525620167F2F8E0073755C /* CJIMCustomTableViewCell.h */,
+				09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */,
+				091096CE167DB35500B94984 /* LoginView.xib */,
+				09D8D14E167CCA070000BAA0 /* CJIMAppDelegate.h */,
+				09D8D14F167CCA070000BAA0 /* CJIMAppDelegate.m */,
+				09D8D157167CCA070000BAA0 /* MainStoryboard.storyboard */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		0953436B167FDFF9004B8E1B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0953436C167FE030004B8E1B /* CJIMEventsTableViewController.h */,
+				0953436D167FE030004B8E1B /* CJIMEventsTableViewController.m */,
+				09534372167FE413004B8E1B /* CJIMNewEventController.h */,
+				09534373167FE413004B8E1B /* CJIMNewEventController.m */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		09D8D12E167CCA070000BAA0 = {
 			isa = PBXGroup;
 			children = (
+				0953435F167FD81B004B8E1B /* main_icon.png */,
 				095341FB167F7A52004B8E1B /* Kal.bundle */,
-				095341E9167F772A004B8E1B /* QuartzCore.framework */,
-				095341E7167F7724004B8E1B /* MapKit.framework */,
-				098118B5167CCE28004C0C82 /* libicucore.dylib */,
-				098118B3167CCE10004C0C82 /* libz.dylib */,
-				098118B1167CCC17004C0C82 /* Security.framework */,
-				098118AF167CCC0A004C0C82 /* CFNetwork.framework */,
-				098118AD167CCC02004C0C82 /* MobileCoreServices.framework */,
-				098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */,
 				09D8D145167CCA070000BAA0 /* ImFamilyApp */,
 				09D8D13C167CCA070000BAA0 /* Frameworks */,
 				09D8D13A167CCA070000BAA0 /* Products */,
@@ -153,7 +218,7 @@
 		09D8D13A167CCA070000BAA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09D8D139167CCA070000BAA0 /* ImFamilyApp.app */,
+				09D8D139167CCA070000BAA0 /* KpImInTouch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +226,14 @@
 		09D8D13C167CCA070000BAA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				095341E9167F772A004B8E1B /* QuartzCore.framework */,
+				095341E7167F7724004B8E1B /* MapKit.framework */,
+				098118B5167CCE28004C0C82 /* libicucore.dylib */,
+				098118B3167CCE10004C0C82 /* libz.dylib */,
+				098118B1167CCC17004C0C82 /* Security.framework */,
+				098118AF167CCC0A004C0C82 /* CFNetwork.framework */,
+				098118AD167CCC02004C0C82 /* MobileCoreServices.framework */,
+				098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */,
 				091096D0167DB36200B94984 /* Simperium.framework */,
 				09D8D13D167CCA070000BAA0 /* UIKit.framework */,
 				09D8D13F167CCA070000BAA0 /* Foundation.framework */,
@@ -174,28 +247,11 @@
 			isa = PBXGroup;
 			children = (
 				09534209167F83D3004B8E1B /* src */,
-				091096CE167DB35500B94984 /* LoginView.xib */,
-				09D8D14E167CCA070000BAA0 /* CJIMAppDelegate.h */,
-				09D8D14F167CCA070000BAA0 /* CJIMAppDelegate.m */,
-				091096DD167E7EB800B94984 /* CJIMLoginViewController.h */,
-				091096DE167E7EB800B94984 /* CJIMLoginViewController.m */,
-				09D8D157167CCA070000BAA0 /* MainStoryboard.storyboard */,
-				09D8D15D167CCA070000BAA0 /* CJIMMasterViewController.h */,
-				09525620167F2F8E0073755C /* CJIMCustomTableViewCell.h */,
-				09525621167F2F8E0073755C /* CJIMCustomTableViewCell.m */,
-				09D8D15E167CCA070000BAA0 /* CJIMMasterViewController.m */,
-				09D8D160167CCA070000BAA0 /* CJIMDetailViewController.h */,
-				09D8D161167CCA070000BAA0 /* CJIMDetailViewController.m */,
-				09D8D15A167CCA070000BAA0 /* ImFamilyApp.xcdatamodeld */,
-				0952561D167F0CF10073755C /* Message.h */,
-				0952561E167F0CF10073755C /* Message.m */,
-				0952560E167ED56A0073755C /* User.h */,
-				0952560F167ED56A0073755C /* User.m */,
-				098118C4167CD05C004C0C82 /* Location.h */,
-				098118C5167CD05C004C0C82 /* Location.m */,
+				09534369167FD9D0004B8E1B /* Application */,
+				09534367167FD995004B8E1B /* Message Board */,
+				0953436B167FDFF9004B8E1B /* Calendar */,
+				09534368167FD9BE004B8E1B /* Core Data */,
 				09D8D146167CCA070000BAA0 /* Supporting Files */,
-				09525612167EE9FC0073755C /* CJIMNewMessageController.h */,
-				09525613167EE9FC0073755C /* CJIMNewMessageController.m */,
 			);
 			path = ImFamilyApp;
 			sourceTree = "<group>";
@@ -203,6 +259,9 @@
 		09D8D146167CCA070000BAA0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09534361167FD93E004B8E1B /* 121-landscape.png */,
+				09534363167FD94E004B8E1B /* 86-camera.png */,
+				09534365167FD961004B8E1B /* 42-photos.png */,
 				0953420E167F891E004B8E1B /* 103-map.png */,
 				0952563B167F6EF20073755C /* 124-bullhorn.png */,
 				09525639167F6EBB0073755C /* 56-cloud.png */,
@@ -243,7 +302,7 @@
 			);
 			name = ImFamilyApp;
 			productName = ImFamilyApp;
-			productReference = 09D8D139167CCA070000BAA0 /* ImFamilyApp.app */;
+			productReference = 09D8D139167CCA070000BAA0 /* KpImInTouch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -298,6 +357,10 @@
 				095341FC167F7A52004B8E1B /* Kal.bundle in Resources */,
 				0953420A167F83D3004B8E1B /* src in Resources */,
 				0953420F167F891E004B8E1B /* 103-map.png in Resources */,
+				09534360167FD81B004B8E1B /* main_icon.png in Resources */,
+				09534362167FD93E004B8E1B /* 121-landscape.png in Resources */,
+				09534364167FD94E004B8E1B /* 86-camera.png in Resources */,
+				09534366167FD961004B8E1B /* 42-photos.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +382,9 @@
 				09525614167EE9FC0073755C /* CJIMNewMessageController.m in Sources */,
 				0952561F167F0CF10073755C /* Message.m in Sources */,
 				09525622167F2F8E0073755C /* CJIMCustomTableViewCell.m in Sources */,
+				0953436E167FE030004B8E1B /* CJIMEventsTableViewController.m in Sources */,
+				09534371167FE28B004B8E1B /* Event.m in Sources */,
+				09534374167FE413004B8E1B /* CJIMNewEventController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +475,7 @@
 				INFOPLIST_FILE = "ImFamilyApp/ImFamilyApp-Info.plist";
 				OTHER_LDFLAGS = "-Objc";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KpImInTouch;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,7 +493,7 @@
 				INFOPLIST_FILE = "ImFamilyApp/ImFamilyApp-Info.plist";
 				OTHER_LDFLAGS = "-Objc";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KpImInTouch;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

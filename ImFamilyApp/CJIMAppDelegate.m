@@ -9,6 +9,7 @@
 #import "CJIMAppDelegate.h"
 
 #import "CJIMMasterViewController.h"
+#import "CJIMEventsTableViewController.h"
 #import <Simperium/SPAuthenticationManager.h>
 
 @interface CJIMAppDelegate () {
@@ -28,10 +29,18 @@
 {
     // Override point for customization after application launch.
     UITabBarController *tabbarController = (UITabBarController *)self.window.rootViewController;
+    
+    // set master view managed object context
     UINavigationController *navigationController = (UINavigationController *)[tabbarController.viewControllers objectAtIndex:0];
     CJIMMasterViewController *controller = (CJIMMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
+    // set event view managed object context
+    UINavigationController *eventsNavigationController = (UINavigationController *)[tabbarController.viewControllers objectAtIndex:1];
+    CJIMEventsTableViewController *eventsController = (CJIMEventsTableViewController *)eventsNavigationController.topViewController;
+    eventsController.managedObjectContext = self.managedObjectContext;
+    
+    // init simperium
     self.simperium = [[Simperium alloc] initWithRootViewController:
                       _window.rootViewController];
     
