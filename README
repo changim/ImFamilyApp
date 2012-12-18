@@ -1,0 +1,45 @@
+Keep Im In Touch 
+
+Overview:
+This is an app that I designed exclusively for my family, but it can obviously
+be modified for other small groups. Keep Im In Touch simplifies keeping in touch
+by taking all of the services my family enjoys, and putting them in one simple
+app. This eliminates the need for all of us to check several apps multiple 
+times a day to message each other, plan events, share photos, locate each other
+and more. 
+Arguably, a lot of these things can be done via a Facebook group, but having an
+exclusive app just for a small, tight-knit group like my family allows the users
+to keep in touch without any distractions from all of the rest of their social 
+networking lives. Facebook is much more geared towards mass-social networks, so
+more personal relationships tend to get buried in the frenzy of all of the wall
+posts, messages, news-feeds, games, and more from pretty much everyone you know.Special groups like my family can really use their own dedicated apps for more 
+intimate and customized interactions. This frees the group from the craze of the
+mass-social network, and also frees the mass-social network from the complicated
+management of small groups, and leaves apps like Facebook to do what it does 
+best.
+
+Progress:
+Right now, I have the message board, event planning, and location 
+tracking implemented to various degrees: the message board is fully functional,
+the event planning lacks a calendar representations of the planned events, and
+the location tracking needs pins for each user and much more fluid map 
+functionalities in terms of zooming in and out and moving around. All of the
+data is stored and synced instantly with messages, events, and locations all
+belonging to the correct users.
+
+Resources:
+Backend: I used Simperium API to sync all of my core data.
+
+Icons: I used the free icons from Glyphish.
+
+Calendar: I am experimenting with Kal.
+
+Photo: I considered Three20, but I may just do a simple UIImagePickerController.
+
+TODO:
+Drop pins on the map that show where and when the users were located last. 
+Implement the photo sharing tab.
+Improve the event planning tab by integrating a calendar.
+Implement user profiles complete with pictures, and allow admin to manage users.
+Make login secure.
+Reset database, make the app look much better, and deploy.
