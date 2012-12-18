@@ -35,6 +35,7 @@
 		0953436E167FE030004B8E1B /* CJIMEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953436D167FE030004B8E1B /* CJIMEventsTableViewController.m */; };
 		09534371167FE28B004B8E1B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 09534370167FE28B004B8E1B /* Event.m */; };
 		09534374167FE413004B8E1B /* CJIMNewEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09534373167FE413004B8E1B /* CJIMNewEventController.m */; };
+		09534375167FF6F3004B8E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095341E7167F7724004B8E1B /* MapKit.framework */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09534375167FF6F3004B8E1B /* MapKit.framework in Frameworks */,
 				098118B6167CCE28004C0C82 /* libicucore.dylib in Frameworks */,
 				098118B4167CCE10004C0C82 /* libz.dylib in Frameworks */,
 				098118B2167CCC17004C0C82 /* Security.framework in Frameworks */,

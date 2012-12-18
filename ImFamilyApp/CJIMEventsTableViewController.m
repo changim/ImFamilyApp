@@ -112,7 +112,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -197,21 +197,24 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     CJIMCustomTableViewCell *customCell = (CJIMCustomTableViewCell *)cell;
+    
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *eventIs = @"Event: ";
-    customCell.textLabel.text = [eventIs stringByAppendingString:[[object valueForKey:@"title"] description]];
+    NSString *quotationMark = @"\"";
+    NSString *isAt = @"\" at ";
+    customCell.titleLabel.text = [[quotationMark stringByAppendingString:[[object valueForKey:@"title"] description]] stringByAppendingString:isAt];
+    
     //customCell.titleLabel.text = [[object valueForKey:@"title"] description];
     NSString *createdBy = @"Created by: ";
     customCell.authorLabel.text = [createdBy stringByAppendingString:[[[object valueForKey:@"createdBy"] valueForKey:@"name"] description]];
     
+    
     NSDate *date = [object valueForKey:@"date"];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     [dateFormatter setLocale:usLocale];
-    NSString *scheduledFor = @"Scheduled for: ";
-    customCell.dateLabel.text = [scheduledFor stringByAppendingString:[dateFormatter stringFromDate:date]];
+    customCell.dateLabel.text = [dateFormatter stringFromDate:date];
 }
 
 @end
