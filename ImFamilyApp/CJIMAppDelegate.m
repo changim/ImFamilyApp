@@ -69,6 +69,26 @@
         self.collectingLocation = NO;
     }
     
+    // code for seeding family members
+    /*
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSEntityDescription *lucyEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    User *lucy = [NSEntityDescription insertNewObjectForEntityForName:[lucyEntity name] inManagedObjectContext:self.managedObjectContext];
+    lucy.name = @"Lucy";
+    lucy.password = @"1234";
+    lucy.dateOfBirth = [formatter dateFromString:@"1991-06-21"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }*/
+    
     return YES;
 }
 

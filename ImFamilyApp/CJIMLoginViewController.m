@@ -83,6 +83,8 @@
                 NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
                 abort();
             }
+            
+            // dismiss loginView
             [self dismissModalViewControllerAnimated:YES];
             return;
         } else {
