@@ -38,6 +38,7 @@
 		09534378167FFA79004B8E1B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 09534377167FFA78004B8E1B /* User.m */; };
 		0953437E16801409004B8E1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953437D16801409004B8E1B /* CoreLocation.framework */; };
 		095343851680257F004B8E1B /* CJIMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095343841680257F004B8E1B /* CJIMMapViewController.m */; };
+		0953438716802C5C004B8E1B /* 193-location-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0953438616802C5C004B8E1B /* 193-location-arrow.png */; };
 		098118AC167CCBF9004C0C82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */; };
 		098118AE167CCC02004C0C82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AD167CCC02004C0C82 /* MobileCoreServices.framework */; };
 		098118B0167CCC0A004C0C82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098118AF167CCC0A004C0C82 /* CFNetwork.framework */; };
@@ -103,6 +104,7 @@
 		0953437D16801409004B8E1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		095343831680257F004B8E1B /* CJIMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIMMapViewController.h; sourceTree = "<group>"; };
 		095343841680257F004B8E1B /* CJIMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIMMapViewController.m; sourceTree = "<group>"; };
+		0953438616802C5C004B8E1B /* 193-location-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "193-location-arrow.png"; sourceTree = "<group>"; };
 		098118AB167CCBF9004C0C82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		098118AD167CCC02004C0C82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		098118AF167CCC0A004C0C82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -278,6 +280,7 @@
 		09D8D146167CCA070000BAA0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0953438616802C5C004B8E1B /* 193-location-arrow.png */,
 				09534361167FD93E004B8E1B /* 121-landscape.png */,
 				09534363167FD94E004B8E1B /* 86-camera.png */,
 				09534365167FD961004B8E1B /* 42-photos.png */,
@@ -380,6 +383,7 @@
 				09534362167FD93E004B8E1B /* 121-landscape.png in Resources */,
 				09534364167FD94E004B8E1B /* 86-camera.png in Resources */,
 				09534366167FD961004B8E1B /* 42-photos.png in Resources */,
+				0953438716802C5C004B8E1B /* 193-location-arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

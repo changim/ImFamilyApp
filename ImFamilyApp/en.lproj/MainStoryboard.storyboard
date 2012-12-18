@@ -164,12 +164,32 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-zP-x9C"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6H-ot-kgL">
+                                <color key="backgroundColor" red="1" green="0.48360546180000002" blue="0.4217584747" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="3I3-UX-RXY"/>
+                                    <constraint firstAttribute="height" constant="27" id="Z24-yh-nKL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="193-location-arrow.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMapToCurrentUserLocation:" destination="uul-XN-qE2" eventType="touchUpInside" id="Wkl-tp-EKi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ohd-zP-x9C" firstAttribute="trailing" secondItem="LA6-gu-KsY" secondAttribute="trailing" type="default" id="BVs-aU-vTm"/>
                             <constraint firstItem="Ohd-zP-x9C" firstAttribute="leading" secondItem="LA6-gu-KsY" secondAttribute="leading" type="default" id="S29-71-Kw6"/>
-                            <constraint firstItem="Ohd-zP-x9C" firstAttribute="trailing" secondItem="LA6-gu-KsY" secondAttribute="trailing" type="default" id="jFh-B3-Hiz"/>
                             <constraint firstItem="Ohd-zP-x9C" firstAttribute="top" secondItem="LA6-gu-KsY" secondAttribute="top" type="default" id="mmV-7x-v4q"/>
+                            <constraint firstAttribute="bottom" secondItem="Z6H-ot-kgL" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="rVQ-oD-QI5"/>
+                            <constraint firstItem="Z6H-ot-kgL" firstAttribute="leading" secondItem="LA6-gu-KsY" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tHh-qP-nCB"/>
                             <constraint firstItem="Ohd-zP-x9C" firstAttribute="bottom" secondItem="LA6-gu-KsY" secondAttribute="bottom" type="default" id="voe-Qs-Glu"/>
                         </constraints>
                     </view>
@@ -525,6 +545,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="07-map-marker.png" width="16" height="26"/>
         <image name="08-chat.png" width="24" height="22"/>
         <image name="121-landscape.png" width="24" height="18"/>
+        <image name="193-location-arrow.png" width="24" height="24"/>
         <image name="83-calendar.png" width="23" height="25"/>
     </resources>
     <classes>
@@ -558,6 +579,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="CJIMMapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CJIMMapViewController.h"/>
             <relationships>
+                <relationship kind="action" name="centerMapToCurrentUserLocation:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

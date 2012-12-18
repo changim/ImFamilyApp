@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.locationManager.delegate = self;
+    //self.locationManager.delegate = self;
     
     
     [self prepareMapPresentation];
@@ -50,6 +50,25 @@
     [super viewWillDisappear:animated];
     //[self.mapView removeAnnotations:self.mapView.annotations];
 }
+
+- (IBAction)centerMapToCurrentUserLocation:(id)sender {
+    CJIMAppDelegate *appDelegate = ((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]);
+    
+    Location *currentUserLocation = appDelegate.currentUser.location;
+    if (currentUserLocation){
+        
+        [self.mapView setCenterCoordinate: CLLocationCoordinate2DMake([currentUserLocation.latitude doubleValue],[currentUserLocation.longitude doubleValue]) animated:YES];
+        
+        MKCoordinateRegion region;
+        region.center.latitude = [currentUserLocation.latitude doubleValue];
+        region.center.longitude = [currentUserLocation.longitude doubleValue];
+        region.span.latitudeDelta = .2;
+        region.span.longitudeDelta = .2;
+        region = [self.mapView regionThatFits:region];
+        [self.mapView setRegion:region animated:TRUE];
+    }
+}
+
 
 - (void) prepareMapPresentation {
     self.mapView.mapType = MKMapTypeHybrid;
