@@ -49,6 +49,7 @@
 
 - (void)submit
 {
+    // Create new event.
     UINavigationController *navigationController = (UINavigationController *)self.parentViewController;
     NSArray *viewControllers = navigationController.viewControllers;
     CJIMEventsTableViewController *eventViewController = (CJIMEventsTableViewController *)[viewControllers objectAtIndex:viewControllers.count - 2];
@@ -56,12 +57,12 @@
     NSEntityDescription *entity = [[eventViewController.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+    // Configure the new event.
     [newManagedObject setValue:self.eventTextField.text forKey:@"title"];
     [newManagedObject setValue:self.eventDatePicker.date forKey:@"date"];
     [newManagedObject setValue:((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]).currentUser forKey:@"createdBy"];
     [newManagedObject setValue:[NSDate date] forKey:@"createdAt"];
+    
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
@@ -73,6 +74,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+// Handle keyboard.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];

@@ -33,7 +33,7 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
+    // Update the user interface for the message.
 
     if (self.detailItem) {
         NSString *titleIs = @"Subject: ";

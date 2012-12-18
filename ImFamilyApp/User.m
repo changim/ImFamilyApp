@@ -2,11 +2,12 @@
 //  User.m
 //  ImFamilyApp
 //
-//  Created by James Im on 12/16/12.
+//  Created by James Im on 12/17/12.
 //  Copyright (c) 2012 James Im. All rights reserved.
 //
 
 #import "User.h"
+#import "Location.h"
 #import "Message.h"
 
 
@@ -16,5 +17,6 @@
 @dynamic name;
 @dynamic password;
 @dynamic message;
+@dynamic location;
 
 @end

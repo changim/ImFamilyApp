@@ -8,6 +8,7 @@
 
 #import "CJIMLoginViewController.h"
 #import "User.h"
+#import "Location.h"
 
 #import "CJIMAppDelegate.h"
 
@@ -42,6 +43,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Login only if the name and password are valid according to stored data.
 - (void)login
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
@@ -59,7 +61,28 @@
         User *user = (User*) [queryResult objectAtIndex:0];
         if ([user.password isEqualToString:self.passwordTextField.text]) {
             NSLog(@"login successful");
-            ((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]).currentUser = user;
+            
+            CJIMAppDelegate *appDelegate = ((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]);
+            appDelegate.currentUser = user;
+            
+            // create or update user's location
+            if (appDelegate.lastLocation) {
+                if (!user.location) {
+                    NSEntityDescription *locationEntity = [NSEntityDescription entityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+                    user.location = [NSEntityDescription insertNewObjectForEntityForName:[locationEntity name] inManagedObjectContext:self.managedObjectContext];
+                }
+                user.location.latitude = [[NSNumber alloc] initWithDouble:appDelegate.lastLocation.coordinate.latitude];
+                user.location.longitude = [[NSNumber alloc] initWithDouble:appDelegate.lastLocation.coordinate.longitude];
+            }
+            
+            // Save the context.
+            NSError *error = nil;
+            if (![self.managedObjectContext save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
             [self dismissModalViewControllerAnimated:YES];
             return;
         } else {
@@ -67,6 +90,8 @@
         }
     }
 }
+
+// Handle keyboards.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];

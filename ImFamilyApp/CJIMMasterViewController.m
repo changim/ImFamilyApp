@@ -32,6 +32,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
+    // Show the login screen.
     CJIMLoginViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
     [self presentViewController:loginVC animated:NO completion: nil];
     loginVC.managedObjectContext = self.managedObjectContext;
@@ -204,6 +205,7 @@
 }
  */
 
+// Fill in the cell.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     CJIMCustomTableViewCell *customCell = (CJIMCustomTableViewCell *)cell;

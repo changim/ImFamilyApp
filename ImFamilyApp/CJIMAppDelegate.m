@@ -10,6 +10,7 @@
 
 #import "CJIMMasterViewController.h"
 #import "CJIMEventsTableViewController.h"
+#import "Location.h"
 #import <Simperium/SPAuthenticationManager.h>
 
 @interface CJIMAppDelegate () {
@@ -44,18 +45,6 @@
     self.simperium = [[Simperium alloc] initWithRootViewController:
                       _window.rootViewController];
     
-    
-    /* seed me as family member
-    NSString *url = @"https://api.simperium.com/1/clip-hushes-0ee/user/i/james";
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-    [request setHTTPMethod:@"POST"];
-    NSString *data = [NSString stringWithFormat:@"{\"name\":\"James\", \"password\":\"1234\"}"];
-    [request setHTTPBody:[data dataUsingEncoding:NSUTF8StringEncoding]];
-    [request setValue:@"a072e56ad97b4491a3d5fbd70addfe7d"		forHTTPHeaderField:@"X-Simperium-Token"];
-    
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];*/
-    
     // start simperium
     self.simperium.authenticationEnabled = NO;
     [self.simperium startWithAppID:@"clip-hushes-0ee"
@@ -71,32 +60,55 @@
                                              success:^{}
                                             failure:^(int responseCode, NSString *responseString){NSLog(@"fail: %@",responseString);}];
     
+    // track user location
+    if ([CLLocationManager locationServicesEnabled]) {
+        [self startStandardUpdates];//set up location manager
+        self.collectingLocation = YES;
+    }
+    else {
+        self.collectingLocation = NO;
+    }
+    
     return YES;
 }
-/*
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    _data = [[NSMutableData alloc] init];
+
+// set up location manager
+- (void)startStandardUpdates
+{
+    // Create the location manager if this object does not
+    // already have one.
+    if (nil == _locationManager)
+        _locationManager = [[CLLocationManager alloc] init];
+    
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    _locationManager.distanceFilter = 500;
+    
+    [_locationManager startUpdatingLocation];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [_data appendData:data];
+// Delegate method from the CLLocationManagerDelegate protocol.
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    // If it's a relatively recent event, turn off updates to save power
+    CLLocation* location = [locations lastObject];
+    NSDate* eventDate = location.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (abs(howRecent) < 15.0) {
+        // If the event is recent, do something with it.
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+              location.coordinate.latitude,
+              location.coordinate.longitude);
+        self.lastLocation = location;
+        if (self.currentUser) {
+            self.currentUser.location.latitude = [[NSNumber alloc] initWithDouble:self.lastLocation.coordinate.latitude];
+            self.currentUser.location.longitude = [[NSNumber alloc] initWithDouble:self.lastLocation.coordinate.longitude];
+        }
+    }
 }
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"%@",error.localizedDescription);
-    abort();
-    // Please do something sensible here, like log the error.
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    //NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:_data options:0 error:nil];
-    NSString *responseText = [[NSString alloc] initWithData:_data encoding:NSUTF8StringEncoding];
-    //self.simperium.user = [[SPUser alloc] initWithEmail:[responseDictionary objectForKey:@"username"]
-                                                   //token:[responseDictionary objectForKey:@"access_token"]];
-    // Do anything you want with it
-    NSLog(@"response text: %@ %@", responseText, self.simperium.user.authenticated ? @"YES" : @"NO");
-}*/
-							
+					
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -113,6 +125,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    if (self.collectingLocation) [_locationManager stopUpdatingLocation];
     /*[_authenticationManager authenticateWithUsername:@"everyone@im.com" password:@"1234"
                                              success:^{}
                                              failure:^(int responseCode, NSString *responseString){NSLog(@"fail: %@",responseString);}];*/

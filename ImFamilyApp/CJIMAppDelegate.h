@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Simperium/Simperium.h>
+#import <MapKit/MapKit.h>
 
 #import "User.h"
 
-@interface CJIMAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CJIMAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -21,7 +22,15 @@
 @property (strong, nonatomic) Simperium *simperium;
 @property (strong, nonatomic) User *currentUser;
 
+// core location stuff
+@property CLLocationManager *locationManager;
+@property BOOL collectingLocation;
+@property (strong, nonatomic) CLLocation *lastLocation;
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+// Delegate method from the CLLocationManagerDelegate protocol.
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations ;
 
 @end

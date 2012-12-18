@@ -49,6 +49,7 @@
 
 - (void)submit
 {
+    // Create new message object.
     UINavigationController *navigationController = (UINavigationController *)self.parentViewController;
     NSArray *viewControllers = navigationController.viewControllers;
     CJIMMasterViewController *masterViewController = (CJIMMasterViewController *)[viewControllers objectAtIndex:viewControllers.count - 2];
@@ -56,8 +57,7 @@
     NSEntityDescription *entity = [[masterViewController.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+    // Configure the new message.
     [newManagedObject setValue:self.titleTextField.text forKey:@"title"];
     
     NSString *bodyText = self.bodyTextView.text;
@@ -65,7 +65,9 @@
     [newManagedObject setValue:bodyText forKey:@"body"];
     
     [newManagedObject setValue:((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]).currentUser forKey:@"user"];
+    
     [newManagedObject setValue:[NSDate date] forKey:@"createdAt"];
+    
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
@@ -77,14 +79,15 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+// Dismiss keyboard upon return.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     [self.bodyTextView becomeFirstResponder];
-    
     return YES;
 }
 
+// Code for dealing with TextView placeholder text.
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     if ([textView.text isEqualToString:@"Enter message here."]) {

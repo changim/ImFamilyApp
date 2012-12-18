@@ -24,13 +24,14 @@
         <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
         <relationship name="message" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="user" inverseEntity="Message" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="160" positionY="192" width="128" height="105"/>
         <element name="Location" positionX="-315" positionY="150" width="128" height="73"/>
         <element name="Message" positionX="214" positionY="14" width="128" height="105"/>
-        <element name="SPManagedObject" positionX="187" positionY="258" width="128" height="75"/>
-        <element name="User" positionX="-126" positionY="27" width="128" height="105"/>
+        <element name="SPManagedObject" positionX="-198" positionY="456" width="128" height="75"/>
+        <element name="User" positionX="-126" positionY="27" width="128" height="118"/>
     </elements>
 </model>

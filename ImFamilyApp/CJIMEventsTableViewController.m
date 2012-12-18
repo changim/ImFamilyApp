@@ -194,6 +194,7 @@
  }
  */
 
+// Fill in the cell.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     CJIMCustomTableViewCell *customCell = (CJIMCustomTableViewCell *)cell;
