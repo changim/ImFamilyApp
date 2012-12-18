@@ -13,7 +13,7 @@
 #import "User.h"
 
 @interface CJIMMapViewController ()
-
+    @property CLLocationManager *locationManager;
 @end
 
 @implementation CJIMMapViewController
@@ -30,26 +30,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 39.951777;
-    coordinate.longitude = -75.190966;
-    MKCoordinateRegion region;
-    region.center.latitude = 39.951777;
-    region.center.longitude = -75.190966;
-    region.span.latitudeDelta = 1;
-    region.span.longitudeDelta = 1;
-    region = [self.mapView regionThatFits:region];
-    [self.mapView setRegion:region animated:TRUE];
+    self.locationManager.delegate = self;
+    
     
     [self prepareMapPresentation];
 	// Do any additional setup after loading the view.
 }
-/*
-- (void)viewWillAppear:(BOOL)animated {
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
-    [super viewWillAppear:animated];
-    [self prepareMapPresentation];
-}*/
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -58,7 +48,7 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.mapView removeAnnotations:self.mapView.annotations];
+    //[self.mapView removeAnnotations:self.mapView.annotations];
 }
 
 - (void) prepareMapPresentation {
@@ -66,8 +56,19 @@
     CJIMAppDelegate *appDelegate = ((CJIMAppDelegate *)[[UIApplication sharedApplication] delegate]);
     
     Location *currentUserLocation = appDelegate.currentUser.location;
-    if (currentUserLocation)
+    if (currentUserLocation){
+
         [self.mapView setCenterCoordinate: CLLocationCoordinate2DMake([currentUserLocation.latitude doubleValue],[currentUserLocation.longitude doubleValue]) animated:YES];
+        
+        MKCoordinateRegion region;
+        region.center.latitude = [currentUserLocation.latitude doubleValue];
+        region.center.longitude = [currentUserLocation.longitude doubleValue];
+        region.span.latitudeDelta = .2;
+        region.span.longitudeDelta = .2;
+        region = [self.mapView regionThatFits:region];
+        [self.mapView setRegion:region animated:TRUE];
+    }
+    
     /*if (masterViewController.collectingLocation) {
         CJIMNoteDataController *dataController = masterViewController.dataController;
         for (int i = 0; i < [dataController countOfList]; i++) {
